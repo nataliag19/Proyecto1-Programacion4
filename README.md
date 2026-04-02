@@ -1,7 +1,7 @@
 # Proyecto 1: Desacoplamiento de software: Principios
 # para gestionar y aislar dependencias - Programación 4
 
-Juan Carlos Mejía Cano
+Juan Carlos Mejía Cano\
 Natalia Gallego Barrero
 Docente: Alejandro Rodas Vásquez
 Universidad Tecnológica de Pereira
