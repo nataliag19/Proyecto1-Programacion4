@@ -3,9 +3,9 @@
 Juan Carlos Mejía Cano\
 Natalia Gallego Barrero\
 Docente: Alejandro Rodas Vásquez\
-Universidad Tecnológica de Pereira\
+Universidad Tecnológica de Pereira
 
-13 de marzo de 2026\
+2 de abril del 2026
 
 
 **Proyecto: Sistema "NutriUTP"**
