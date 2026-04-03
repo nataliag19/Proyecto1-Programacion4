@@ -39,15 +39,15 @@ class SistemaNutriUTP:
                 plato = self.menu.obtener(idx)
 
                 if not plato:
-                    print("❌ Opción inválida")
+                    print("Opción inválida")
                     continue
 
                 venta = self.procesador.procesar(comensal, plato)
 
                 if venta:
-                    print(f"✔️ Compra realizada: {venta}")
+                    print(f"Compra realizada: {venta}")
                 else:
-                    print("❌ Plato agotado")
+                    print("Plato agotado")
 
             elif op == "2":
                 self.procesador.reporte()
@@ -57,4 +57,4 @@ class SistemaNutriUTP:
                 break
 
             else:
-                print("❌ Opción inválida")
+                print("Opción inválida")
