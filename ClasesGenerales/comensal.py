@@ -3,7 +3,7 @@ class Comensal:
         self.id_estudiante = id_estudiante
         self.tipo_subsidio = tipo_subsidio
 
-    def calcular_precio_final(self, precio):
+    def calcular_descuento(self, precio):
         if self.tipo_subsidio == "alto":
             return precio * 0.5
         elif self.tipo_subsidio == "medio":

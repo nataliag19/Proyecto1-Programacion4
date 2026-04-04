@@ -15,7 +15,7 @@ class Plato:
         if self.cantidad > 0:
             self.cantidad -= 1
 
-    def descripcion(self):
+    def descripcion_detallada(self):
         tipo = "Vegetariano" if self.es_vegetariano else "Normal"
         estado = "Disponible" if self.esta_disponible() else "Agotado"
         return f"{self.nombre} | {tipo} | ${self._precio_base} | {estado} | Stock: {self.cantidad}"

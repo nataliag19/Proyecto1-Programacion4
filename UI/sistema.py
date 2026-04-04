@@ -12,14 +12,14 @@ class SistemaNutriUTP:
         fecha = input("Fecha del menú: ")
         self.menu = MenuDia(fecha)
 
-        n = int(input("Cantidad de platos: "))
-        for _ in range(n):
-            nombre = input("Nombre: ")
-            precio = float(input("Precio: "))
-            veg = input("Vegetariano (si/no): ").lower() == "si"
-            cantidad = int(input("Cantidad disponible: "))
+        cantidad_platos_a_ingresar = int(input("Cantidad de platos: "))
+        for _ in range(cantidad_platos_a_ingresar):
+            nombre_plato = input("Nombre del plato: ")
+            precio_plato = float(input("Precio del plato: "))
+            plato_veg = input("Es un plato vegetariano (si/no): ").lower() == "si"
+            cantidad_plato = int(input("Cantidad disponible de este plato: "))
 
-            self.menu.agregar_plato(Plato(nombre, precio, veg, cantidad))
+            self.menu.agregar_plato(Plato(nombre_plato, precio_plato, plato_veg, cantidad_plato))
 
     def registrar_comensal(self):
         id_est = input("ID estudiante: ")
@@ -38,16 +38,24 @@ class SistemaNutriUTP:
 
             if op == "1":
                 comensal = self.registrar_comensal()
-                self.menu.mostrar()
 
-                idx = int(input("Seleccione plato: ")) - 1
-                plato = self.menu.obtener(idx)
+                while True:
+                    preferencia = int(input("Ingrese su preferencia:\n 1. Estándar\n 2.Vegetariano\n"))
+                    if preferencia == 1 or preferencia == 2:
+                        break
+                    else:
+                        print("Ingrese una opción válida.\n")
+
+                print("Lista de platos:\n")
+                platos = self.menu.seleccionar_opcion(preferencia - 1)
+                id_plato = int(input("Seleccione su plato: ")) - 1
+                plato = platos[f"{id_plato}"]
 
                 if not plato:
                     print("❌ Opción inválida")
                     continue
 
-                venta = self.procesador.procesar(comensal, plato)
+                venta = self.procesador.generar_tiquete(comensal, plato)
 
                 if venta:
                     print(f"✔️ Compra realizada: {venta}")

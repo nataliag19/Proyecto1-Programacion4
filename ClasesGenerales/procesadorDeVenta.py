@@ -3,12 +3,12 @@ class ProcesadorVenta:
         self._ventas = []
         self._total = 0
 
-    def procesar(self, comensal, plato):
+    def generar_tiquete(self, comensal, plato):
         if not plato.esta_disponible():
             return None
 
         precio_base = plato.precio()
-        precio_final = comensal.calcular_precio_final(precio_base)
+        precio_final = comensal.calcular_descuento(precio_base)
 
         plato.reducir_stock()
 
@@ -23,5 +23,5 @@ class ProcesadorVenta:
 
         return venta
 
-    def reporte(self):
-        return self._ventas
+    def validar_pago(self):
+        return f"Ventas hechas hasta ahora:\n{self._ventas} \n mensaje para la tesorería."
