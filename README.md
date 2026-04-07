@@ -16,4 +16,21 @@ opción vegetariana. Además, debe procesar los subsidios estudiantiles, donde e
 depende del perfil socioeconómico del alumno. El reto de diseño consiste en crear un sistema
 donde el cambio en las reglas de negocio (ej. nuevos tipos de subsidio o cambios en los
 ingredientes del menú) no obligue a reescribir todo el código, gestionando las dependencias
-para que el software sea fácil de mantener y evolucionar.
+para que el software sea fácil de mantener y evolucionar.\
+
+El proyecto está organizado en múltiples archivos para garantizar la separación de responsabilidades:
+
+📁 Proyecto\
+│\
+├── ClasesGenerales\
+│   ├── plato.py\
+│   ├── menuDelDia.py\
+│   ├── comensal.py\
+│   └── procesadorDeVenta.py\
+│\
+├── UI\
+│   └── sistema.py\
+│\
+└── nutriUTPmain.py
+
+**nutriUTPmain.py:** Inicializa el sistema y ejecuta la aplicación.
