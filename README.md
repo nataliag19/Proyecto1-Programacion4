@@ -35,4 +35,5 @@ El proyecto está organizado en múltiples archivos para garantizar la separaci�
 │\
 └── nutriUTPmain.py
 
+\
 **nutriUTPmain.py:** Inicializa el sistema y ejecuta la aplicación.
